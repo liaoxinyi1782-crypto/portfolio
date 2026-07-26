@@ -42,41 +42,43 @@
   /* ============ NAVIGATION ============ */
   nav {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 42px; left: 0; right: 0;
     z-index: 1000;
-    padding: 18px 48px;
+    padding: 16px 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
     transition: all 0.4s;
   }
 
   nav.scrolled {
-    background: rgba(245,240,232,0.92);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 2px 30px rgba(0,0,0,0.06);
+    background: rgba(0,0,0,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     padding: 14px 48px;
   }
 
   .nav-logo {
-    font-family: 'Noto Serif SC', serif;
-    font-size: 1.3rem;
-    font-weight: 900;
-    color: var(--charcoal);
+    display: flex; flex-direction: column; line-height: 1.2;
+  }
+  .nav-logo-cn {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    color: #fff;
+  }
+  .nav-logo-en {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 300;
     letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
   }
-
-  .nav-logo .dot {
-    display: inline-block;
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--coral);
-    margin-left: 2px;
-    vertical-align: super;
-    transition: all 0.3s;
-  }
-
-  nav.scrolled .nav-logo .dot { background: var(--deep-blue); }
 
   .nav-links { display: flex; gap: 32px; }
 
@@ -312,9 +314,10 @@
   }
 
   .section-dot {
-    width: 16px; height: 16px;
-    border-radius: 50%;
-    flex-shrink: 0;
+    width: 6px; height: 6px; border-radius: 50%;
+    margin: 0 auto 20px;
+    background: rgba(139,92,246,0.6);
+    box-shadow: 0 0 12px rgba(139,92,246,0.3);
   }
 
   .section-title {
@@ -528,7 +531,7 @@
   }
 
   /* ============ VIDEO WORKS SECTION ============ */
-  .video-works .section-dot { background: var(--pink); }
+  .video-works .section-dot { background: rgba(139,92,246,0.6); }
   .video-works .section-line { background: var(--pink); }
 
   .video-grid {
@@ -728,7 +731,7 @@
   }
 
   /* ============ PROJECTS SECTION ============ */
-  .projects .section-dot { background: var(--green); }
+  .projects .section-dot { background: rgba(139,92,246,0.6); }
   .projects .section-line { background: var(--green); }
 
   .projects-grid {
@@ -800,7 +803,7 @@
   }
 
   /* ============ SKILLS SECTION ============ */
-  .skills .section-dot { background: var(--deep-blue); }
+  .skills .section-dot { background: rgba(139,92,246,0.6); }
   .skills .section-line { background: var(--deep-blue); }
 
   .skills-grid {
@@ -899,7 +902,7 @@
   .skill-card:hover .skill-dot-row span { transform: scale(1.3); }
 
   /* ============ AWARDS SECTION ============ */
-  .awards .section-dot { background: var(--yellow); }
+  .awards .section-dot { background: rgba(139,92,246,0.6); }
   .awards .section-line { background: var(--yellow); }
 
   .awards-marquee {
@@ -967,7 +970,7 @@
   .award-pill:nth-child(7n+7):hover { background: var(--orange); color: var(--cream); }
 
   /* ============ EDUCATION SECTION ============ */
-  .education .section-dot { background: var(--sky-blue); }
+  .education .section-dot { background: rgba(139,92,246,0.6); }
   .education .section-line { background: var(--sky-blue); }
 
   .edu-card {
@@ -1065,7 +1068,7 @@
   }
 
   .contact .section-header { justify-content: center; }
-  .contact .section-dot { background: var(--coral); }
+  .contact .section-dot { background: rgba(139,92,246,0.6); }
   .contact .section-line { display: none; }
 
   .contact-sub {
@@ -1503,7 +1506,10 @@
 
 <!-- Navigation -->
 <nav id="mainNav">
-  <div class="nav-logo">廖欣怡<span class="dot"></span></div>
+  <div class="nav-logo">
+    <span class="nav-logo-cn">廖欣怡</span>
+    <span class="nav-logo-en">Liao Xinyi</span>
+  </div>
   <div class="nav-links">
     <a href="#videoworks">作品</a>
     <a href="#adportfolio">策划</a>
@@ -1538,7 +1544,7 @@
 <!-- Video Works Section -->
 <section class="video-works" id="videoworks">
   <div class="section-header reveal">
-    <div class="section-dot" style="background:var(--pink)"></div>
+    <div class="section-dot" style="background:rgba(139,92,246,0.6)"></div>
     <h2 class="section-title">视频作品</h2>
     <div class="section-line" style="background:var(--pink)"></div>
   </div>
@@ -1649,7 +1655,7 @@
 <!-- Ad Portfolio Flipbook Section -->
 <section class="flipbook-section" id="adportfolio">
   <div class="section-header reveal">
-    <div class="section-dot" style="background:var(--orange)"></div>
+    <div class="section-dot" style="background:rgba(139,92,246,0.6)"></div>
     <h2 class="section-title">广告策划作品集</h2>
     <div class="section-line" style="background:var(--orange)"></div>
   </div>
@@ -1689,7 +1695,7 @@
 <!-- Experience Section -->
 <section class="experience" id="experience">
   <div class="section-header reveal">
-    <div class="section-dot" style="background:var(--deep-blue)"></div>
+    <div class="section-dot" style="background:rgba(139,92,246,0.6)"></div>
     <h2 class="section-title">实习经历</h2>
     <div class="section-line" style="background:var(--deep-blue)"></div>
   </div>
@@ -1751,7 +1757,7 @@
 <!-- Skills Section -->
 <section class="skills" id="skills">
   <div class="section-header reveal">
-    <div class="section-dot" style="background:var(--deep-blue)"></div>
+    <div class="section-dot" style="background:rgba(139,92,246,0.6)"></div>
     <h2 class="section-title">技能树</h2>
     <div class="section-line" style="background:var(--deep-blue)"></div>
   </div>
@@ -1793,7 +1799,7 @@
 <!-- Awards Section -->
 <section class="awards" id="awards">
   <div class="section-header reveal">
-    <div class="section-dot" style="background:var(--yellow)"></div>
+    <div class="section-dot" style="background:rgba(139,92,246,0.6)"></div>
     <h2 class="section-title">荣誉证书</h2>
     <div class="section-line" style="background:var(--yellow)"></div>
   </div>
@@ -1834,7 +1840,7 @@
 <!-- Contact Section -->
 <section class="contact" id="contact">
   <div class="section-header reveal">
-    <div class="section-dot" style="background:var(--coral)"></div>
+    <div class="section-dot" style="background:rgba(139,92,246,0.6)"></div>
     <h2 class="section-title">联系我</h2>
   </div>
   <p style="text-align:center; font-size:1rem; color:var(--charcoal); opacity:0.6; margin-top:12px; margin-bottom:8px; letter-spacing:1px;">中南财经政法大学 · 电影学 · 2023 - 2027</p>
